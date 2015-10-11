@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Clojure Intro</title>
+    <meta name="description" content="An introduction to Clojure for people with Java background">
+    <meta name="author" content="pabżdźdźwiągief">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-markdown>
+            <script type="text/template">
+                # Intro to Clojure
+            </script>
+            <aside class="notes">
+                Not including logo because of copyright.
+                <img src="https://upload.wikimedia.org/wikipedia/en/1/1d/Clojure_logo.gif"
+                     alt="Clojure Logo">
+                But if shown, point out how cool the logo is.
+            </aside>
+        </section>
+
+        <section data-markdown>
+            <script type="text/template">
+                ## About this intro
+
+                For people with Java background. Focusing on familiarities
+                and interop, aware of underlying implementation details.
+
+                * Live coding mostly
+                * And in what Clojure differs from Java
+            </script>
+        </section>
+
+        <section data-markdown>
+            <script type="text/template">
+                ## Clojure
+
+                Created by Rich Hickey in 2007
+
+                Lots of talks about Clojure and beyond:
+                * <a href="https://github.com/matthiasn/talk-transcripts/blob/master/Hickey_Rich/SimpleMadeEasy.md">Simple Made Easy</a>
+                * <a href="https://www.youtube.com/watch?v=-6BsiVyC1kM">The Value of Values</a>
+                * <a href="http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey">Are We There Yet?</a>
+                * <a href="https://github.com/matthiasn/talk-transcripts/tree/master/Hickey_Rich">...</a>
+            </script>
+            <aside class="notes">
+                No big corporation/research group standing behind Clojure - driven mainly by original
+                creator and by Clojure community ("not a research project on language design").
+
+                The author happens also to be a good speaker, his talks might be useful
+                given how Clojure differs *philosophically* from Java idioms sometimes
+                and they provide some rationale on Clojure's design.
+
+                "Simple Made Easy" explains why is it not entirely correct to call Clojure "complex".
+
+                Worth pointing to other talks that are strictly about Clojure like
+                <a href="https://www.youtube.com/watch?v=dGVqrGmwOAw">Clojure Concurrency</a>
+                <a href="https://www.youtube.com/watch?v=P76Vbsk_3J0">Clojure for Java Programmers</a>
+                <a href="https://www.youtube.com/watch?v=VSdnJDO-xdg">Clojure, Made Simple</a>
+                and with those you get language features like reducers or transducers presented
+                by the language's author himself which is nice.
+
+                Appeal to authority #1
+                <a href="https://youtu.be/VSdnJDO-xdg?t=3613">Users of Clojure</a>
+
+                Appeal to authority #2
+                <a href="https://www.youtube.com/watch?v=rMItsZq_n20">John Carmack coding in LISP</a>
+
+                Might need permission to use this:
+                <img src="http://orig06.deviantart.net/b91f/f/2012/229/a/6/rich_hickey_by_emareaf-d5bevsm.png"
+                     alt="Protrait of Rich Hickey by emareaf on deviantart"
+                     height="200em">
+            </aside>
+        </section>
+
+        <section>
+            <section data-markdown>
+                <script type="text/template">
+                    ## A language for concurrency
+
+                    * **Concurrency** → Immutability
+                    * Immutability → **FP**
+                </script>
+            </section>
+            <aside class="notes">
+                That was the story back then, but probably still holds.
+
+                Clojure started off as a language for dealing with concurrency.
+                To remain sane when writing concurrent programs maintaining as much
+                immutability as possible the key. And FP makes sense for dealing
+                with immutable data.
+            </aside>
+            <section data-markdown>
+                <script type="text/template">
+                    ### Oh, you wanted Haskell then?
+
+                    But also a language that is:
+
+                    * Simple (!= Easy)
+                    * Succinct
+                    * Without monads
+                </script>
+            </section>
+            <aside class="notes">
+                Might also mention that it is meant to be stable, and to have
+                that without suffering from stagnation you need extensibility (macros).
+            </aside>
+        </section>
+
+        <section data-markdown>
+            <script type="text/template">
+                ## Compared to Java
+
+                <table>
+                    <tr><td>**Java**</td><td>**Clojure**</td></tr>
+                    <tr><td>ALGOL descendant</td><td>a LISP</td></tr>
+                    <tr><td>classes and methods</td><td>namespaces and functions</td></tr>
+                    <tr><td>data hiding, mutability</td><td>"It's all just data"</td></tr>
+                    <tr><td>type checker and debugger</td><td>REPL</td></tr>
+                    <tr><td>closed set of features</td><td>make your own language</td></tr>
+                    <tr><td>no monads</td><td>no monads</td></tr>
+                </table>
+            </script>
+            <aside class="notes">
+                Syntax - against popular conception that all programming languages
+                are alike, Clojure might at first feel really alien to someone without
+                prior exposure to any LISP.
+
+                Apart from syntax what really draws a line between Java and Clojure
+                is taking sceptical stance towards Object Orientation and instead
+                emphasizing manipulation of plain immutable data.
+
+                Note that despite emphasis on pure data, under the hood everything
+                is done with Java objects.
+            </aside>
+        </section>
+    </div>
+</div>
+<script src="reveal.js/lib/js/head.min.js"></script>
+<script src="reveal.js/js/reveal.js"></script>
+<script>
+	        // Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+    </script>
+</body>
+</html>
