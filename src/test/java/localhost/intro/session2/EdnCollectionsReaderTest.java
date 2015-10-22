@@ -1,4 +1,4 @@
-package com.github.pabzdzdzwiagief.clojure.intro.session2;
+package localhost.intro.session2;
 
 import clojure.lang.PersistentArrayMap;
 import clojure.lang.PersistentHashMap;

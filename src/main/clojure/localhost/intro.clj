@@ -1,4 +1,4 @@
-(ns com.github.pabzdzdzwiagief.clojure.intro
+(ns localhost.intro
   (:import spark.Spark))
 
 (Spark/port 8080)

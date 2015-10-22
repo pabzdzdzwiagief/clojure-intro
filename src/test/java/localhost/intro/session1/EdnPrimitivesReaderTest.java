@@ -1,4 +1,4 @@
-package com.github.pabzdzdzwiagief.clojure.intro.session1;
+package localhost.intro.session1;
 
 import clojure.lang.Keyword;
 import clojure.lang.Symbol;
